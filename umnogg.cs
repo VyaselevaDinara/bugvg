@@ -9,16 +9,16 @@ using System.Text.RegularExpressions;
 
 public class Program
 {
-    static int Multiply(int a, int b)
+    static int Multiply(int a, int b) // Код реализует функцию умножения двух чисел a и b.
     {
-        int result = 0;
+        int result = 0; // Результат произведения сохраняется в переменной result
         if (a < 0 && b < 0)
-            for (int i = 0; i < -a; i++)
+            for (int i = 0; i < -a; i++) // Если оба числа a и b отрицательны, производится умножение по модулю и знак минус ставится перед результатом.
             {
                 result += -b;
             }
         else if (a > 0 && b > 0)
-            for (int i = 0; i < a; i++)
+            for (int i = 0; i < a; i++) // Если оба числа a и b положительны, производится обычное умножение.
             {
                 result += b;
             }
@@ -28,7 +28,7 @@ public class Program
             }
         return result;
     }
-    static void Main(string[] args)
+    static void Main(string[] args) // В функции main происходит вызов функции multiply с различными аргументами и результаты выводятся на консоль.
     {
         Console.WriteLine(Multiply(5, 8));
         Console.WriteLine(Multiply(-4, -7));
